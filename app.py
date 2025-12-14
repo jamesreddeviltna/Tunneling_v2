@@ -19,12 +19,12 @@ st.write(
 # ---------------- Sidebar controls ----------------
 st.sidebar.header("Parameters (eV, nm)")
 
-E_eV  = st.sidebar.slider("Electron energy E (eV)", 0.001, 20.0, 2.0, 0.001)
-Vb_eV = st.sidebar.slider("Barrier height Vb (eV)", 0.0,  20.0, 5.0, 0.001)
-b_nm  = st.sidebar.slider("Barrier width b (nm)",  0.01,  10.0, 1.0, 0.01)
+E_eV  = st.sidebar.slider("Electron energy E (eV)", 0.001, 5.0, 2.0, 0.01)
+Vb_eV = st.sidebar.slider("Barrier height Vb (eV)", 0.0,  5.0, 2.5, 0.01)
+b_nm  = st.sidebar.slider("Barrier width b (nm)",  0.01,  3.0, 0.5, 0.01)
 
-Vw_eV = st.sidebar.slider("Well potential Vw (eV)", -5.0,  5.0, 0.0, 0.001)
-L_nm  = st.sidebar.slider("Well width L (nm)",     0.01,  20.0, 2.0, 0.01)
+Vw_eV = st.sidebar.slider("Well potential Vw (eV)", -2.0,  2.0, 0.0, 0.001)
+L_nm  = st.sidebar.slider("Well width L (nm)",     0.01,  10.0, 2.0, 0.01)
 
 st.sidebar.divider()
 phi0 = st.sidebar.slider("Global phase φ₀ (rad)", -np.pi, np.pi, 0.0, 0.01)

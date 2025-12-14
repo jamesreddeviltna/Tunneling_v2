@@ -274,7 +274,7 @@ with col2:
 
     elif plot_mode == "Re/Im ψ(x)":
         ax.plot(x, np.real(psi), label="Re[ψ(x)]")
-        ax.plot(x, np.imag(psi), label="Im[ψ(x)]")
+        ax.plot(x, -np.imag(psi), label="-Im[ψ(x)]")
         ax.set_ylabel("Re/Im ψ(x)")
 
     else:
@@ -284,7 +284,7 @@ with col2:
 
         ax.plot(x, prob / prob_scale, label="|ψ(x)|² (normalized)")
         ax.plot(x, np.real(psi) / amp_scale, label="Re[ψ(x)] (normalized)")
-        ax.plot(x, np.imag(psi) / amp_scale, label="Im[ψ(x)] (normalized)")
+        ax.plot(x, -np.imag(psi) / amp_scale, label="-Im[ψ(x)] (normalized)")
         ax.set_ylabel("Normalized curves")
 
     ax.set_xlabel("x (m)")
